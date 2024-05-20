@@ -88,6 +88,24 @@ if (paragrafosEncontrados.length > 0) {
       console.log(`Palavra: ${palavraInfo.palavra}, Quantidade: ${palavraInfo.quantidade}`);
     });
   });
+const wordskey = paragrafosEncontrados.flatMap(paragrafo => paragrafo.palavrasEncontradas.map(palavraInfo => palavraInfo.palavra));
+const uniqueWordsSet = new Set(wordskey);
+const uniqueWordsList = [...uniqueWordsSet];
+
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'objctv': uniqueWordsList
+});
+
+googletag = window.googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+    googletag.pubads().setTargeting('WordsKey', uniqueWordsList);
+});
+
+console.log("Palavras únicas encontradas:");
+console.log(uniqueWordsList);
+
 } else {
   console.log("Nenhum parágrafo contém as palavras especificadas.");
 }
