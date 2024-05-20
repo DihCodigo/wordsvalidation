@@ -103,7 +103,7 @@ googletag.cmd.push(function() {
     googletag.pubads().setTargeting('WordsKey', uniqueWordsList);
 });
 
-console.log("Palavras únicas encontradas:");
+console.log("Palavras únicas:");
 console.log(uniqueWordsList);
 
 } else {
