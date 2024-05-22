@@ -136,7 +136,8 @@ if (elementosEncontrados.length > 0) {
         googletag.pubads().setTargeting('WordsKey', uniqueWordsList);
     });
 
-    console.log("Todas Plv: ", uniqueWordsList);
+    console.log("Todas Plv ,: ", uniqueWordsList);
+    console.log("Todas Plv +: "+ uniqueWordsList);
 
 } else {
     console.log("Nenhuma palavra Espc.");
