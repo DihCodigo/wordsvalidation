@@ -40,7 +40,7 @@ const palavras = [
     "tcu","teich","tercio","terremot","terroris","teste","tiro","toffolli","toga","tomaz","torrent","tortur","trabalho forcado",
     "trae","trafic","tragedia","trai","transa","transparente","tribuna","uisque","vacina","valeixo","valente","vaquejada",
     "variola","vereador","viana","vibrador","vice","vinho","violac","violad","violen","virada","virus","vitima","viuv","viva",
-    "vivo","vodka","wajngarten","whisky","wilson","winter","witzel","zambelli","zema","trauma","vida"
+    "vivo","vodka","wajngarten","whisky","wilson","winter","witzel","zambelli","zema","trauma"
   ].map(palavra => palavra.toLowerCase());
 
   function encontrarPalavras(elemento, palavras) {
