@@ -40,7 +40,27 @@ const palavras = [
     "tcu","teich","tercio","terremot","terroris","teste","tiro","toffolli","toga","tomaz","torrent","tortur","trabalho forcado",
     "trae","trafic","tragedia","trai","transa","transparente","tribuna","uisque","vacina","valeixo","valente","vaquejada",
     "variola","vereador","viana","vibrador","vice","vinho","violac","violad","violen","virada","virus","vitima","viuv","viva",
-    "vivo","vodka","wajngarten","whisky","wilson","winter","witzel","zambelli","zema","trauma"
+    "vivo","vodka","wajngarten","whisky","wilson","winter","witzel","zambelli","zema","trauma",
+    "abusada","abusado","abusador","abuso","acidente","acidentes","agredida","agredido","agressao","alcoolismo",
+    "al-qaeda","arma","armada","armadas","armado","armados","armamento","armas","assaltante","assaltantes","assalto",
+    "assassinada","assassinadas","assassinado","assassinados","assassinar","assassinato","assassino","assediador",
+    "assedio","assustador","ataque","atentado","atropelada","atropeladas","atropelado","atropelados","balanco-geral",
+    "bdsm","bingo","biquini","bomba","bondage","briga","brutalidade","bumbum","caça-niquel","cachaça","cachimbo","cadaver",
+    "cadeia","calcinha","calibre","camisinha","campos-de-concentracao","carcere","cassino","cerveja","charuto","ciberataque",
+    "cidade-alerta","cigarreira","cigarrilha","cigarro","cocaina","conhaque","conteudo-adulto","corpao","corpo","corpos",
+    "crack","cracolandia","Crime","crimes","criminosa","criminosas","criminoso","criminosos","cueca","culposo","dependencia-quimica",
+    "dependente-quimico","desastre","desastres","desmatamento","destruida","destruidas","doloso","droga","drogas","ecstasy","enchente","enchentes",
+    "enterrada","enterrado","erecao","erotica","erotismo","esperma","estuprada","estuprar","estupro","eutanasia","execucao","exploraçao-de-menores",
+    "explosao","extremistas","faca","facada","fake-news","falsa","falsas","fatal","feminicidio","feridos","ferimento","foragido","fotos-picantes",
+    "funeral","fuzil","grupo-extremista","guerra","guerras","hezbollah","homem-bomba","homicidio","incendio","investigacao","islâmico",
+    "jogo-de-azar","jogo-do-bicho","jogos-de-azar","julgamento","kamasutra","lanca-perfume","lava-jato","lsd","maconha","manifestacao",
+    "masturbacao","mata","matador","matar","matou","medo","metralhadora","morre","morrem","morreram","morreu","morta","mortais","mortal",
+    "morte","mortes","morto","mortos","municao","mutilado","narguile","nazismo","nazista","nicotina","nu","nua","nudes","nudez","orgasmo",
+    "orgia","pcc","pedofila","pinga","policia","porno","pornografia","predador","preso","prostituicao","prostituta","punhal","queimada",
+    "queimadas","queimado","queimados","racismo","racistas","rascistas","revolver","rinha","roleta","roubo","seios","sensualiza","separatista",
+    "sepultado","sequestrada","sequestradas","sequestrado","sequestrados","sequestrar","sequestro","sex","sexo","sexuais","sexual","sexy",
+    "suicidio","swing","terremoto","terrorismo","terrorista","tiro","tiroteio","tortura","torturada","torturadas","torturado","torturados",
+    "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky"
   ].map(palavra => palavra.toLowerCase());
 
   function encontrarPalavras(elemento, palavras) {
