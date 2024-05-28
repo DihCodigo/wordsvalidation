@@ -101,7 +101,7 @@ if (resultadoUrl.contagem > 0) {
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-        'objctv': uniqueWordsList
+        'wordsKey': uniqueWordsList
     });
 
     googletag = window.googletag || {};
