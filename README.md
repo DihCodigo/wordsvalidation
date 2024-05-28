@@ -1,6 +1,6 @@
 # Encontrar Palavras em Parágrafos
 
-Este é um script JavaScript para encontrar palavras específicas em parágrafos, subtitulos, titulos e URL de uma página da web.
+Este é um script JavaScript para encontrar palavras específicas em  URL de uma página da web.
 
 ## Instalação
 

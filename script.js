@@ -63,29 +63,7 @@ const palavras = [
     "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky"
   ].map(palavra => palavra.toLowerCase());
 
-  function encontrarPalavras(elemento, palavras) {
-    const textoElemento = elemento.textContent.toLowerCase();
-    let resultado = {
-        contagem: 0,
-        palavrasEncontradas: []
-    };
-
-    palavras.forEach(palavra => {
-        const regex = new RegExp(`\\b${palavra}\\b`, 'g');
-        const ocorrencias = textoElemento.match(regex);
-        if (ocorrencias) {
-            resultado.contagem += ocorrencias.length;
-            resultado.palavrasEncontradas.push({
-                palavra: palavra,
-                quantidade: ocorrencias.length
-            });
-        }
-    });
-
-    return resultado;
-}
-
-function verificarUrl(url, palavras) {
+  function verificarUrl(url, palavras) {
     const urlMinuscula = url.toLowerCase();
     let resultado = {
         contagem: 0,
@@ -107,41 +85,17 @@ function verificarUrl(url, palavras) {
     return resultado;
 }
 
-const elementos = document.querySelectorAll('p, h1, h2, h3');
-const elementosEncontrados = [];
-
-elementos.forEach(elemento => {
-    const resultado = encontrarPalavras(elemento, palavras);
-    if (resultado.contagem > 0) {
-        elementosEncontrados.push({
-            texto: elemento.textContent,
-            contagem: resultado.contagem,
-            palavrasEncontradas: resultado.palavrasEncontradas
-        });
-    }
-});
-
 const urlAtual = window.location.href;
 const resultadoUrl = verificarUrl(urlAtual, palavras);
+
 if (resultadoUrl.contagem > 0) {
-    elementosEncontrados.push({
-        texto: urlAtual,
-        contagem: resultadoUrl.contagem,
-        palavrasEncontradas: resultadoUrl.palavrasEncontradas
-    });
-}
-
-if (elementosEncontrados.length > 0) {
-    elementosEncontrados.forEach(elemento => {
-      console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.log(`Texto: ${elemento.texto}`);
-        //console.log(`Número total de palavras encontradas: ${elemento.contagem}`);
-        elemento.palavrasEncontradas.forEach(palavraInfo => {
-            console.log(`Plv: ${palavraInfo.palavra}, Qntd: ${palavraInfo.quantidade}`);
-        });
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log(`URL: ${urlAtual}`);
+    resultadoUrl.palavrasEncontradas.forEach(palavraInfo => {
+        console.log(`Palavra: ${palavraInfo.palavra}, Quantidade: ${palavraInfo.quantidade}`);
     });
 
-    const wordskey = elementosEncontrados.flatMap(elemento => elemento.palavrasEncontradas.map(palavraInfo => palavraInfo.palavra));
+    const wordskey = resultadoUrl.palavrasEncontradas.map(palavraInfo => palavraInfo.palavra);
     const uniqueWordsSet = new Set(wordskey);
     const uniqueWordsList = [...uniqueWordsSet];
 
@@ -156,8 +110,8 @@ if (elementosEncontrados.length > 0) {
         googletag.pubads().setTargeting('WordsKey', uniqueWordsList);
     });
 
-    console.log("Todas Plv: ", uniqueWordsList);
+    console.log("Todas as Palavras: ", uniqueWordsList);
 
 } else {
-    console.log("Nenhuma palavra Espc.");
+    console.log("Nenhuma palavra encontrada na URL.");
 }
