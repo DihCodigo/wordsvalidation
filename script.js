@@ -60,7 +60,8 @@ const palavras = [
     "queimadas","queimado","queimados","racismo","racistas","rascistas","revolver","rinha","roleta","roubo","seios","sensualiza","separatista",
     "sepultado","sequestrada","sequestradas","sequestrado","sequestrados","sequestrar","sequestro","sex","sexo","sexuais","sexual","sexy",
     "suicidio","swing","terremoto","terrorismo","terrorista","tiro","tiroteio","tortura","torturada","torturadas","torturado","torturados",
-    "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky"
+    "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky","enforcando","enforcada",
+    "enforcado","espanca","espancado","espancada","agredindo","agredido","esfaqueado","esfaqueada","socorro"
   ].map(palavra => palavra.toLowerCase());
 
   function verificarUrl(url, palavras) {
