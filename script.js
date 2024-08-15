@@ -63,10 +63,14 @@ const palavras = [
     "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky","enforcando","enforcada",
     "enforcado","espanca","espancado","espancada","agredindo","agredido","esfaqueado","esfaqueada","socorro","Voepass","Aéreo","Queda","Caixa-preta",
     "Anac","IML","Queda","Avião","Acidente","vítima","iml","Vinhedo"
-  ].map(palavra => palavra.toLowerCase());
+  ].map(palavra => normalizar(palavra));
+  
+function normalizar(texto) {
+    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
-  function verificarUrl(url, palavras) {
-    const urlMinuscula = url.toLowerCase();
+function verificarUrl(url, palavras) {
+    const urlNormalizada = normalizar(url);
     let resultado = {
         contagem: 0,
         palavrasEncontradas: []
@@ -74,7 +78,7 @@ const palavras = [
 
     palavras.forEach(palavra => {
         const regex = new RegExp(`\\b${palavra}\\b`, 'g');
-        const ocorrencias = urlMinuscula.match(regex);
+        const ocorrencias = urlNormalizada.match(regex);
         if (ocorrencias) {
             resultado.contagem += ocorrencias.length;
             resultado.palavrasEncontradas.push({
@@ -91,7 +95,6 @@ const urlAtual = window.location.href;
 const resultadoUrl = verificarUrl(urlAtual, palavras);
 
 if (resultadoUrl.contagem > 0) {
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     console.log(`URL: ${urlAtual}`);
     resultadoUrl.palavrasEncontradas.forEach(palavraInfo => {
         console.log(`Palavra: ${palavraInfo.palavra}, Quantidade: ${palavraInfo.quantidade}`);
@@ -113,7 +116,6 @@ if (resultadoUrl.contagem > 0) {
     });
 
     console.log("Todas as Palavras: ", uniqueWordsList);
-
 } else {
     console.log("Nenhuma palavra encontrada na URL.");
 }
