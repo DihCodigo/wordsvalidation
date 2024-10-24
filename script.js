@@ -63,7 +63,7 @@ const palavras = [
     "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky","enforcando","enforcada",
     "enforcado","espanca","espancado","espancada","agredindo","agredido","esfaqueado","esfaqueada","socorro","Voepass","Aéreo","Queda","Caixa-preta",
     "Anac","IML","Queda","Avião","Acidente","vítima","iml","Vinhedo","Deolane Bezerra","Deolane","presa","Irã","Mísseis","Ataque","Líbano","Israel",
-    "israelense","militares"
+    "israelense","militares","Paraibana","Santa-Branca"
   ].map(palavra => normalizar(palavra));
   
 function normalizar(texto) {
