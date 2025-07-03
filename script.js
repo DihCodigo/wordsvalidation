@@ -63,7 +63,22 @@ const palavras = [
     "torturar","trafico","tragedia","transar","uisque","vibradores","vinho","violencia","vitima","vitimas","vodka","whisky","enforcando","enforcada",
     "enforcado","espanca","espancado","espancada","agredindo","agredido","esfaqueado","esfaqueada","socorro","Voepass","Aéreo","Queda","Caixa-preta",
     "Anac","IML","Queda","Avião","Acidente","vítima","iml","Vinhedo","Deolane Bezerra","Deolane","presa","Irã","Mísseis","Ataque","Líbano","Israel",
-    "israelense","militares","Paraibana","Santa-Branca"
+    "israelense","militares","Paraibana","Santa-Branca","faria lima","MST","sem teto","sem terra","sem-terra","FL3500","nós contra eles","MTST",
+    "Super ricos","Super-ricos","sem medo","@mtst","Taxação","povo não vai pagar a conta","ativistas","extremistas","predio do itau","protesto",
+    "invasão","sede do banco","comunismo","edificio mais caro","protestar","extrema esquerda","extremistas","@movimentosemterra","@mtstsp",
+    "@frentepovosemmedo","adoecida","doente","acabada","aparencia","idosa","olheiras","estranha","noia","noiada","maconheira","drogada","canhota",
+    "canhoteira","lixos","partido dela","nojo","credo","velha","escoria","Detesto","lacradora","chata","arrogante","lixeira","pelanca","carniça",
+    "lixo","merda","comunistinha","bosta","globolixo","velha","enchente","enchentes","tragedia no sul","balao","indonesia","mulher feia","Bebada e drogada",
+    "vendeu por um oscar","vendida pelo oscar","vendida ao capitalismo","vendida ao itau","lixo nao reciclavel","que nojo","lobby","contra o capitalismo",
+    "apoiadora de criminosos","Luluzetis","Rouanet","capitalismo do amor","Lula","lulaladrão","luladrão","#lula","petralha","petralhada","petralhas","faz o L",
+    "fez o L","o L","nine","nove dedos","laraio","ladrão","ladrões","fazuele","fazuely","molusco","lulista","9 dedos","lu_la_drão","petista","ptista","Bolsonaro",
+    "Naro","Biroliro","Bozo","22bolsonaro","#bolsonaro","#voltabolsonaro","bolsominion","Minion","Mito","Mitão","Mito22","Gado","genocida","familicia","Alexandre de Morais",
+    "Xandão","esquerda","esquerdista","esquerdopatas","esquerdopata","comunista","comunismo","socialismo","socialista","de direita","facista","fascismo","antidemocracia",
+    "antidemocrático","democracia","democraticos","intervenção federal","censura","censurado","censurados","censurada","boicote","boicotar","boicotado","patriota","patriotismo",
+    "nova ordem mundial","familia brasileira","ditadura","ditadores","STF","protesto","protestar","protestantes","manifestação","paralisação","Israel","trump","irã",
+    "iraniana","terceira guerra","3° guerra","guerra","terrorismo","terroristas","militar","militares","militante","militantes","milicia","fecha itaú","fora itaú",
+    "caridade","doação","doações","mimimi","lacradores","lacração","quem lacra não lucra","nação","nacionalismo","conservador","conservadorismo","conservadora",
+    "patria","lule","quadrilha","amem","link da sorte","fascista"
   ].map(palavra => normalizar(palavra));
   
 function normalizar(texto) {
